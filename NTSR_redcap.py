@@ -15,22 +15,8 @@ from pyodbc import connect as cxn
 
 
 
-'''The following is the list defintion for api_key_list (found below)'''
- ############################################################
-'''
-    API Key Descriptions:
-    index      Name    
-    0     =     NTSR LRPR Tracking Dev
-    1     =     NTSR Registration dev
-    2     =     NTSR Ruesch Tracking Dev
-    3     =     NTSR Registration
-    4     =     NTSR LRPR Tracking
-    5     =     NTSR Ruesch Tracking
-''' 
-############################################################
 
-#reg = reg()
-#recs = reg.export_records()
+
 
 class redcap_connection(object):
     '''Contains properties and values necessary to transform REDCap projects into SQL Database tables
