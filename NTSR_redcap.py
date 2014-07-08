@@ -5,6 +5,7 @@ __version__ = "1.0.1"
 
 
 #Project must be imported as the masterclass for REDCap API connections
+#More information on installing the redcap module can be found at http://pycap.readthedocs.org/en/latest/
 from redcap import Project
 #connect must be imported from pyodbc to allow SQL strings to be based back to the database
 from pyodbc import connect as cxn
