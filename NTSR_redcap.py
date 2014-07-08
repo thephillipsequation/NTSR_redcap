@@ -236,15 +236,7 @@ class redcap_connection(object):
         
         
 
-#Connection strings for the project
-#
-#DRIVER = {SQL SERVER}
-#SERVER = lccc-cpc-sql.uis.georgetown.edu    ##Remote
-#SERVER = SERVER=LCCC-CPC-SQL                ##Local
-#Databases NTSR (prod) NTSR_test (dev)
 
-conn = 'DRIVER={SQL Server}; SERVER=lccc-cpc-sql.uis.georgetown.edu;DATABASE=NTSR'
-#conn = 'DRIVER={SQL Server}; SERVER=LCCC-CPC-SQL;DATABASE=NTSR'
 
 
 
@@ -258,36 +250,6 @@ conn = 'DRIVER={SQL Server}; SERVER=lccc-cpc-sql.uis.georgetown.edu;DATABASE=NTS
 
 
 
-#
-Reg = redcap_connection(connection = conn, url=url_list[1], key = api_key_list[3], table_name = 'Reg',  forms = ['ntsr_subject_id',  'ntsr_registration', 'ntsr_demographics','ntsr_research_information','ntsr_clinical_and_treatment'])
-
-Reg.schema()
-Reg.insert_records()
-
-#
-studsurv = redcap_connection(connection = conn, url=url_list[1], key= api_key_list[4], table_name = 'LRPRSubjectAndSurveyTracking',forms=['study_tracking','survey_tracking'])
-studsurv.schema()
-studsurv.insert_records()
-
-#
-biospec = redcap_connection(connection = conn, url=url_list[1], key= api_key_list[4], table_name = 'lrpr_Biospec',forms=['biospecimen_tracking'])
-biospec.schema()
-biospec.insert_records()
-
-#
-triage = redcap_connection(connection = conn, url=url_list[1], key = api_key_list[4], table_name = 'lrpr_Triage', forms=['triage_information'])
-triage.schema()
-triage.insert_records()
-
-#
-specstud = redcap_connection(connection = conn, url=url_list[1], key = api_key_list[4], table_name = 'lrpr_SpecialStudies', forms=['special_biospecimen_studies'])
-specstud.schema()
-specstud.insert_records()
-
-#
-ruesch = redcap_connection(connection = conn, url=url_list[1], key = api_key_list[5], table_name = 'RueschTracking', forms=['study_tracking','survey_tracking','biospecimen_tracking'])
-ruesch.schema()
-ruesch.insert_records()
 
 
 
