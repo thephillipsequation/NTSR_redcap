@@ -28,17 +28,9 @@ from pyodbc import connect as cxn
     5     =     NTSR Ruesch Tracking
 ''' 
 ############################################################
-api_key_list =['C091B3C3D9D999725A11339A26AF34A9','F51FD90B744137A11A97DF0654F739D0','DFDEF050566A4DB6745C2A4424B149C8','300D9B9652AA755E320CA55E89BF7961','56509384CEF6F8048EB9F2AD2542DC85','94926D47F5B35A9E5861425A249BC3DD']
-#url_list[0] is the dev web server url_list[1] is production 
-url_list = ['https://redcap-dev.georgetown.edu/redcap/api/', 'https://redcap.georgetown.edu/redcap/api/']
-# TEST Vars
+
 #reg = reg()
 #recs = reg.export_records()
-#conn = cxn('DRIVER={SQL Server}; SERVER=lccc-cpc-sql.uis.georgetown.edu;DATABASE=NTSR_dev')     #Remote connection for NTSR
-#conn = cxn('DRIVER={SQL Server}; SERVER=LCCC-CPC-SQL;DATABASE=NTSR_dev')                          #local connection for NTSR
-#c = conn.cursor()
-#api_key_list =['3326398096F62710CDEF1C6CFC7D387B','F51FD90B744137A11A97DF0654F739D0','DFDEF050566A4DB6745C2A4424B149C8','300D9B9652AA755E320CA55E89BF7961','56509384CEF6F8048EB9F2AD2542DC85','94926D47F5B35A9E5861425A249BC3DD']
-#url_list = ['https://redcap-dev.georgetown.edu/redcap/api/', 'https://redcap.georgetown.edu/redcap/api/']
 
 class redcap_connection(object):
     '''Contains properties and values necessary to transform REDCap projects into SQL Database tables
